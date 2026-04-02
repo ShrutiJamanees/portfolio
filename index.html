@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruti Jamanees | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 70% 30%, #061a0d 0%, #050505 100%);
+            color: #ffffff;
+            scroll-behavior: smooth;
+            min-height: 100vh;
+        }
+
+        .text-neon { color: #22c55e; }
+        .bg-neon { background-color: #22c55e; }
+
+        .profile-glow-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-circle {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 2px solid #22c55e;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            background: #000;
+            box-shadow: inset 0 0 20px rgba(34, 197, 94, 0.2);
+        }
+
+        .glow-aura {
+            position: absolute;
+            width: 325px;
+            height: 325px;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 40px rgba(34, 197, 94, 0.6), 
+                0 0 100px rgba(34, 197, 94, 0.3),
+                0 0 180px rgba(34, 197, 94, 0.1);
+            z-index: 1;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+
+        .nav-link:hover {
+            color: #22c55e;
+            text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+            transition: 0.3s;
+        }
+
+        .skill-card, .project-card {
+            background-color: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(34, 197, 94, 0.1);
+            transition: 0.3s;
+        }
+        .skill-card:hover, .project-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-5px);
+            background-color: rgba(34, 197, 94, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center px-10 py-8 max-w-7xl mx-auto">
+        <div class="text-2xl font-black tracking-tighter">Shruti<span class="text-neon">  Jamanees</span></div>
+        <div class="hidden md:flex space-x-10 text-xs font-bold opacity-80 uppercase tracking-widest">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="flex flex-col md:flex-row items-center justify-between px-10 py-10 max-w-7xl mx-auto min-h-[80vh]">
+        <div class="md:w-1/2 space-y-8">
+            <h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tight">
+                Full-Stack <br>
+                <span class="text-neon italic">Developer</span>
+            </h1>
+            <p class="text-gray-400 text-lg max-w-lg leading-relaxed">
+                Electronics & Communication Engineer building digital experiences that merge creativity with technology. Specializing in Java, Web Stack, and Machine Learning.
+            </p>
+            <div class="pt-4">
+                <a href="mailto:sjamanees@gmail.com" class="bg-neon text-black font-black px-12 py-4 rounded-sm uppercase text-xs tracking-widest hover:shadow-[0_0_20px_#22c55e] transition duration-300">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center mt-20 md:mt-0">
+            <div class="profile-glow-container">
+                <div class="glow-aura"></div>
+                <div class="main-circle">
+                    <!-- Replace photo.jpeg with your actual image path -->
+                    <img src="photo.jpeg" alt="Shruti Jamanees" class="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise (Skills) -->
+    <section id="skills" class="px-10 py-24 max-w-7xl mx-auto">
+        <h2 class="text-xs font-bold text-gray-600 uppercase tracking-[0.5em] mb-12 italic text-center">Technical Arsenal</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="skill-card p-10 rounded-2xl">
+                <i class="fas fa-code text-neon text-2xl mb-6"></i>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter"> Languages</h3>
+                <p class="text-gray-500 text-sm italic">Core Java, Python, SQL</p>
+            </div>
+            <div class="skill-card p-10 rounded-2xl">
+                <i class="fas fa-globe text-neon text-2xl mb-6"></i>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Web & API</h3>
+                <p class="text-gray-500 text-sm italic">HTML5, CSS3, JavaScript, FastAPI</p>
+            </div>
+            <div class="skill-card p-10 rounded-2xl">
+                <i class="fas fa-brain text-neon text-2xl mb-6"></i>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">DevOps Tools</h3>
+                <p class="text-gray-500 text-sm italic">Git , Maven , Jenkins</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="px-10 py-24 max-w-7xl mx-auto bg-black/20">
+        <h2 class="text-xs font-bold text-gray-600 uppercase tracking-[0.5em] mb-12 italic text-center">Featured Work</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="project-card p-8 rounded-2xl flex flex-col">
+                <div class="mb-6 flex justify-between items-start">
+                    <i class="fas fa-leaf text-neon text-3xl"></i>
+                    <span class="text-[10px] text-gray-500 font-bold border border-gray-800 px-2 py-1">ML / AI</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 uppercase tracking-tighter">Farmer’s Delight</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    A disease detection system for potato leaves using CNN. Applied OpenCV for image preprocessing including noise removal and color normalization.
+                </p>
+                <div class="mt-auto">
+                    <p class="text-neon text-[10px] font-bold uppercase tracking-widest mb-2">Technologies</p>
+                    <p class="text-gray-500 text-xs italic">Python, TensorFlow, Keras, FastAPI, OpenCV</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card p-8 rounded-2xl flex flex-col">
+                <div class="mb-6 flex justify-between items-start">
+                    <i class="fas fa-comment-dots text-neon text-3xl"></i>
+                    <span class="text-[10px] text-gray-500 font-bold border border-gray-800 px-2 py-1">Web App</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 uppercase tracking-tighter">Text-to-Speech Converter</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Responsive web application converting user text into speech. Features dynamic voice selection across various languages using browser APIs.
+                </p>
+                <div class="mt-auto">
+                    <p class="text-neon text-[10px] font-bold uppercase tracking-widest mb-2">Technologies</p>
+                    <p class="text-gray-500 text-xs italic">HTML, CSS, JavaScript, Web Speech API</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card p-8 rounded-2xl flex flex-col">
+                <div class="mb-6 flex justify-between items-start">
+                    <i class="fas fa-hotel text-neon text-3xl"></i>
+                    <span class="text-[10px] text-gray-500 font-bold border border-gray-800 px-2 py-1">Full Stack</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 uppercase tracking-tighter">Spring Stay</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Hotel management & booking platform with MVC architecture. Includes secure REST APIs, JWT authentication, and Docker containerization.
+                </p>
+                <div class="mt-auto">
+                    <p class="text-neon text-[10px] font-bold uppercase tracking-widest mb-2">Technologies</p>
+                    <p class="text-gray-500 text-xs italic">Spring Boot, JWT, Docker, REST API, SQL</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience / Education -->
+    <section id="experience" class="px-10 py-24 max-w-7xl mx-auto">
+        <div class="max-w-4xl mx-auto border-l border-white/10 pl-10 space-y-16">
+            <div class="relative">
+                <div class="absolute -left-[45px] top-0 w-2 h-2 bg-neon rounded-full shadow-[0_0_10px_#22c55e]"></div>
+                <h4 class="text-xs font-bold text-neon uppercase tracking-widest mb-2">2026 — Experience</h4>
+                <h3 class="text-2xl font-bold uppercase tracking-tighter">Data Annotator — Deccan AI</h3>
+                <p class="text-gray-500 text-sm mt-2 italic">
+                    Worked on Project Illusion, refining datasets for AI vision systems. Generated prompts for aesthetic and weather-based categories. Reviewed video content, applying modifications and ensuring high accuracy for AI dataset development.
+                </p>
+            </div>
+            <div class="relative">
+                <div class="absolute -left-[45px] top-0 w-2 h-2 bg-white/20 rounded-full"></div>
+                <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">2025 — Education</h4>
+                <h3 class="text-2xl font-bold uppercase tracking-tighter">BE (Electronics & Communication)</h3>
+                <p class="text-gray-500 text-sm mt-2 italic">Jain College of Engineering, Belagavi • CGPA: 8.9</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="px-10 py-24 text-center">
+        <h2 class="text-gray-600 font-bold uppercase tracking-[0.5em] mb-8 text-xs">Let's build something</h2>
+        <a href="mailto:sjamanees@gmail.com" class="text-3xl md:text-6xl font-black tracking-tight hover:text-neon transition duration-300 italic">
+            sjamanees@gmail.com
+        </a>
+        <div class="mt-20 flex justify-center gap-10 text-xl text-gray-500">
+            <a href="#" class="hover:text-neon transition"><i class="fab fa-github"></i></a>
+            <a href="#" class="hover:text-neon transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="text-[10px] text-gray-800 font-bold uppercase tracking-[0.8em] mt-24">&copy; 2024 SHRUTI JAMANEES</p>
+    </footer>
+
+</body>
+</html>
